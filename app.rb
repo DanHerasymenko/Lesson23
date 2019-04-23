@@ -20,5 +20,18 @@ post '/visit' do
   @datetime = params[:datetime]
   @barber = params[:barber]
   @color = params[:color]
+
+  hh={:username => 'Введите имя',
+      :phone => 'Введите телефон',
+      :datetime => 'Введите дату и время'}
+
+  hh.each do |key,value|
+    if params[key] == ''
+      @error = hh[key]
+      return erb :visit
+    end
+  end
+  
+
   erb "OK!#{@username}=====#{@phone}=====#{@datetime}=====#{@barber}=====#{@color}"
 end

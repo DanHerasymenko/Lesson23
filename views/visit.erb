@@ -4,18 +4,18 @@
 <form action="/visit" method="POST" role="form">
 
 <div class="form-group">
-    <label>Введите имя</label><br>
-    <input name="username" type="text" class="foerm-control" placeholder="Ваше имя">
+    <label>Введите имя</label>
+    <input name="username" type="text" class="form-control" placeholder="Ваше имя" value="<%=@username%>">
 </div>
 
 <div class="form-group">
-    <label>Введите ваш телефон</label><br>
-    <input name="phone" type="text" class="foerm-control" placeholder="Ваш телефон">
+    <label>Введите ваш телефон</label>
+    <input name="phone" type="text" class="form-control" placeholder="Ваш телефон" value="<%=@phone%>">
 </div>
 
 <div class="form-group">
-    <label>Когда вас ждать?</label><br>
-    <input name="datetime" type="text" class="foerm-control" placeholder="Введите дату и время">
+    <label>Когда вас ждать?</label>
+    <input name="datetime" type="text" class="form-control" placeholder="Введите дату и время" value="<%=@datetime%>">
 </div>
 
 <div class="form-group">
@@ -50,7 +50,7 @@
 </form>
 
 <script type="text/javascript">
-$('#color').simplecolorpicker();
-//alert('Hello from visit page');
-
-</script>
+    $(function() {
+      $('#color').simplecolorpicker();
+    });
+  </script>
